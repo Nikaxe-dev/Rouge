@@ -1,3 +1,4 @@
-playsound minecraft:item.ominous_bottle.dispose block @a[tag=server_host] 100000 150 10000 2 1 1
+execute as @a[tag=server_host] in rouge:camp run playsound minecraft:item.ominous_bottle.dispose block @a ~ ~ ~ 4 1 1
+execute as @a[tag=server_host] in minecraft:overworld run playsound minecraft:item.ominous_bottle.dispose block @a ~ ~ ~ 4 1 1
 
-schedule function rouge:items/recallpotion/drunkpart2 2.5s
+schedule function rouge:items/recallpotion/drunkpart2 3.75s
