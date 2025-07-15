@@ -1,0 +1,1 @@
+execute in rouge:camp run teleport @a[tag=server_host] -8 104 3

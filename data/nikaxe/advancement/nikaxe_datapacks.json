@@ -1,0 +1,18 @@
+{
+    "display": {
+        "title": {
+            "text": "Nikaxe's Datapacks"
+        },
+        "description": {
+            "text": "Datapacks created by Nikaxe!"
+        },
+        "icon": {
+            "id": "command_block"
+        }
+    },
+    "criteria": {
+        "nikaxe_datapacks": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

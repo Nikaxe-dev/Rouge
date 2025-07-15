@@ -1,0 +1,23 @@
+{
+    "criteria": {
+        "drank_recall": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "items": "minecraft:potion",
+                    "components": {
+                        "potion_contents": {
+                            "custom_name": "recall_potion",
+                            "custom_color":2465228
+                        }
+                    }
+                }
+            }
+        }
+    },
+    
+    "rewards": {
+        "function": "rouge:items/recallpotion/drunk"
+    },
+    "parent": "rouge:rouge"
+}

@@ -1,0 +1,18 @@
+{
+  "structures": [
+    {
+      "structure": "rouge:starting_island",
+      "weight": 1
+    }
+  ],
+  "placement": {
+    "salt": 1234,
+    "type": "concentric_rings",
+    "distance": 0,
+    "count": 1,
+    "spread": 0,
+    "preferred_biomes": [
+        
+    ]
+  }
+}

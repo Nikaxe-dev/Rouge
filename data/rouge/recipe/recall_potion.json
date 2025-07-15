@@ -1,0 +1,26 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        " i ",
+        "sGs",
+        "ccc"
+    ],
+    "key": {
+        "i": "minecraft:iron_ingot",
+        "G": "minecraft:glass_bottle",
+        "c": "minecraft:copper_ingot",
+        "s": "minecraft:sugar"
+    },
+    "result": {
+        "id": "minecraft:potion",
+        "components": {
+            "potion_contents": {
+                "custom_name": "recall_potion",
+                "custom_color": 2465228
+            },
+            "custom_name": "Recall Potion",
+            "lore": ["Teleports you back home safely."]
+        },
+        "count": 1
+    }
+}

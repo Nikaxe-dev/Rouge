@@ -1,0 +1,1 @@
+particle reverse_portal 150000 252 150000 1 1 1 1 10000

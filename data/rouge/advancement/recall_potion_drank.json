@@ -1,0 +1,36 @@
+{
+    "display": {
+        "title": {
+            "text": "Back to buisness"
+        },
+        "description": {
+            "text": "You drank your very first recall potion. Did it taste nice?"
+        },
+        "icon": {
+            "id": "potion",
+            "components": {
+                "potion_contents": {
+                    "custom_name": "recall_potion",
+                    "custom_color": 2465228
+                }
+            }
+        }
+    },
+    "criteria": {
+        "drank_recall_advancement": {
+            "trigger": "minecraft:consume_item",
+            "conditions": {
+                "item": {
+                    "items": "minecraft:potion",
+                    "components": {
+                        "potion_contents": {
+                            "custom_name": "recall_potion",
+                            "custom_color":2465228
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "parent": "rouge:rouge"
+}

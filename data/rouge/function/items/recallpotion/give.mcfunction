@@ -1,0 +1,1 @@
+give @s minecraft:potion[potion_contents={custom_name:"recall_potion",custom_color:2465228},custom_name="Recall Potion",lore=["Teleports you back home safely."]]

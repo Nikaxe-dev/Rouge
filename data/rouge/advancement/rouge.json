@@ -1,0 +1,30 @@
+{
+    "display": {
+        "title": {
+            "text": "Rouge"
+        },
+        "description": {
+            "text": "The Rouge datapack/map created by Nikaxe."
+        },
+        "icon": {
+            "id": "potion",
+            "components": {
+                "potion_contents": {
+                    "custom_name": "recall_potion",
+                    "custom_color": 2465228
+                }
+            }
+        }
+    },
+    "criteria": {
+        "nikaxe_datapacks": {
+            "trigger": "minecraft:tick"
+        }
+    },
+    "parent": "nikaxe:nikaxe_datapacks",
+    "rewards": {
+        "recipes": [
+            "rouge:recall_potion"
+        ]
+    }
+}

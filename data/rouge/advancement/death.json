@@ -1,0 +1,31 @@
+{
+    "display": {
+        "title": {
+            "text": "The first loss"
+        },
+        "description": {
+            "text": "Do not rage quit, you still have your gear."
+        },
+        "icon": {
+            "id": "skeleton_skull"
+        }
+    },
+    "criteria": {
+        "has_died": {
+        "trigger": "minecraft:entity_hurt_player",
+        "conditions": {
+            "player": [
+                {
+                    "condition": "minecraft:entity_properties",
+                    "entity": "this",
+                    "predicate": {
+                        "type": "minecraft:player",
+                        "nbt": "{Health:0f}"
+                    }
+                }
+            ]
+        }
+        }
+    },
+    "parent": "rouge:rouge"
+}

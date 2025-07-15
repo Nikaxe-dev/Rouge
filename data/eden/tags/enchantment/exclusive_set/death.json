@@ -1,0 +1,17 @@
+{
+    "values": [
+      {
+        "id": "keepinv:deathlock",
+        "required": false
+      },
+      {
+        "id": "keepinv:gravehold",
+        "required": false
+      },
+      {
+        "id": "keepinv:safekeep",
+        "required": false
+      }
+    ]
+  }
+  
