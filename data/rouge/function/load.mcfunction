@@ -25,7 +25,11 @@ gamerule doImmediateRespawn true
 
 scoreboard objectives add deaths_event deathCount
 
+# Create triggers for use without cheats
+
+scoreboard objectives add rouge_help trigger
+scoreboard players enable @a rouge_help
+scoreboard players set @a rouge_help 0
+
 tellraw @a ["",{"text":"Rouge","color":"dark_aqua"},{"text":" Datapack by "},{"text":"Nikaxe","color":"red"},{"text":" loaded."}]
 tellraw @a ["",{"text": "---------------"}]
-tellraw @a ["",{"text":"Huge credit towards "},{"text":"Explorer's Eden","color":"red","clickEvent": {"action": "open_url","value": "https://modrinth.com/organization/explorers-eden"},"underlined": true},{"text":" on "},{"text":"modrinth","color":"green","clickEvent": {"action": "open_url","value": "https://modrinth.com/"},"underlined": true},{"text":" for the keep-inventory related mechanics."}]
-tellraw @a ["",{"text":"Those mechanics are taken from their datapack called "},{"text":"Nice Keep Inventory","color":"aqua","clickEvent": {"action": "open_url","value": "https://modrinth.com/datapack/nice-keep-inventory"},"underlined": true},{"text":"."}]
