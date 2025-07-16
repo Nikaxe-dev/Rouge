@@ -1,0 +1,1 @@
+execute in rouge:camp run execute unless entity @a[tag=server_host,distance=0..] run function rouge:recall
