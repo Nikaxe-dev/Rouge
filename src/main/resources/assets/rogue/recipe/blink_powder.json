@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    "minecraft:blaze_powder",
+    "minecraft:glowstone_dust"
+  ],
+  "result": {
+    "id": "rogue:blink_powder",
+    "count": 1
+  }
+}

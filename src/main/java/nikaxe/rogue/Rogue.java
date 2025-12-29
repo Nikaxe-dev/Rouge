@@ -2,6 +2,8 @@ package nikaxe.rogue;
 
 import net.fabricmc.api.ModInitializer;
 
+import nikaxe.rogue.item.ModItems;
+import nikaxe.rogue.potion.ModPotions;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +13,7 @@ public class Rogue implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+		ModItems.RegisterModItems();
+		ModPotions.RegisterPotions();
 	}
 }
