@@ -1,1 +1,0 @@
-execute in rouge:camp run teleport @a -8 104 3

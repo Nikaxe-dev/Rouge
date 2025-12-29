@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "rogue",
+	"version": "${2.000}",
+	"name": "Rogue",
+	"description": "A mod designed to turn the game into a sandbox-oriented roguelite.",
+	"authors": [
+		"Nikaxe"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Nikaxe-dev/Rouge"
+	},
+	"license": "GPL-3.0-or-later",
+	"icon": "assets/rogue/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"nikaxe.rogue.Rogue"
+		],
+		"client": [
+			"nikaxe.rogue.RogueClient"
+		]
+	},
+	"mixins": [
+		"rogue.mixins.json",
+		{
+			"config": "rogue.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.18.4",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	}
+}
