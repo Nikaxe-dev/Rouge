@@ -1,34 +1,34 @@
 package nikaxe.rogue.effect;
 
-import net.minecraft.entity.LivingEntity;
-import net.minecraft.entity.effect.StatusEffect;
-import net.minecraft.entity.effect.StatusEffectCategory;
-import net.minecraft.entity.effect.StatusEffectInstance;
-import net.minecraft.server.world.ServerWorld;
+import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.effect.MobEffect;
+import net.minecraft.world.effect.MobEffectCategory;
+import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.server.level.ServerLevel;
 import nikaxe.rogue.Rogue;
 
-public class UnstableRecallEffect extends StatusEffect {
-    public UnstableRecallEffect(StatusEffectCategory category, int color) {
+public class UnstableRecallEffect extends MobEffect {
+    public UnstableRecallEffect(MobEffectCategory category, int color) {
         super(category, color);
     }
 
     @Override
-    public boolean applyUpdateEffect(ServerWorld world, LivingEntity entity, int amplifier) {
-        StatusEffectInstance effectInstance = entity.getStatusEffect(ModEffects.UNSTABLE_RECALL_EFFECT);
+    public boolean applyEffectTick(ServerLevel world, LivingEntity entity, int amplifier) {
+//        MobEffectInstance effectInstance = entity.getEffect(ModEffects.UNSTABLE_RECALL_EFFECT);
+//
+//        if(effectInstance != null) {
+//            int ticksRemaining = effectInstance.getDuration();
+//
+//            if(ticksRemaining <= 0) {
+//                Rogue.LOGGER.info("Potion effect working");
+//            }
+//        }
 
-        if(effectInstance != null) {
-            int ticksRemaining = effectInstance.getDuration();
-
-            if(ticksRemaining <= 0) {
-                Rogue.LOGGER.info("Potion effect working");
-            }
-        }
-
-        return super.applyUpdateEffect(world, entity, amplifier);
+        return super.applyEffectTick(world, entity, amplifier);
     }
 
     @Override
-    public boolean canApplyUpdateEffect(int duration, int amplifier) {
+    public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
         return true;
     }
 }
