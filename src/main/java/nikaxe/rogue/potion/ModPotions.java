@@ -9,14 +9,14 @@ import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Registry;
 import net.minecraft.core.Holder;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import nikaxe.rogue.Rogue;
 
 public class ModPotions {
     public static final Holder<Potion> UNSTABLE_RECALL_POTION = registerPotion("unstable_recall_potion", new Potion("unstable_recall_potion", new MobEffectInstance(MobEffects.LEVITATION, 3600, 0)));
 
     private static Holder<Potion> registerPotion(String name, Potion potion) {
-        return Registry.registerForHolder(BuiltInRegistries.POTION, ResourceLocation.fromNamespaceAndPath(Rogue.MOD_ID, name), potion);
+        return Registry.registerForHolder(BuiltInRegistries.POTION, Identifier.fromNamespaceAndPath(Rogue.MOD_ID, name), potion);
     }
 
     public static void RegisterPotions() {
