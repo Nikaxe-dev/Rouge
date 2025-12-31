@@ -1,0 +1,20 @@
+{
+    "display": {
+        "title": {
+            "text": "Rogue"
+        },
+        "description": {
+            "text": "Advancements from the mod Rogue."
+        },
+        "icon": {
+            "id": "rogue:blink_powder"
+        },
+        "announce_to_chat": false,
+        "show_toast": false
+    },
+    "criteria": {
+        "tick": {
+            "trigger": "minecraft:tick"
+        }
+    }
+}

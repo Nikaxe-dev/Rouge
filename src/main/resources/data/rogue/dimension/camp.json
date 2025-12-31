@@ -1,0 +1,14 @@
+{
+  "type": "rogue:camp",
+  "generator": {
+    "type": "minecraft:flat",
+    "settings": {
+      "biome": "rogue:camp",
+      "layers": [
+
+      ],
+      "features": false,
+      "structure_overrides": []
+    }
+  }
+}

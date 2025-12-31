@@ -1,0 +1,3 @@
+# This function checks if the world has loaded yet and runs the rogue:events/loadworld function if it hasnt.
+# Checks by seeing if there is bedrock at (0 -1 0) and none of the players in the world have the worldinit tag, which is applied every tick if the world has loaded.
+execute in rogue:camp unless block 0 -1 0 minecraft:bedrock unless entity @a[tag=worldinit] run function rogue:events/loadworld/main
