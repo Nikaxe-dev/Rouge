@@ -2,6 +2,8 @@
   "item.rogue.blink_powder": "Blink Powder",
 
   "item.minecraft.potion.effect.unstable_recall_potion": "Unstable Recall Potion",
-  "item.minecraft.splash_potion.effect.unstable_recall_potion": "Unstable Recall Splash Potion",
-  "item.minecraft.lingering_potion.effect.unstable_recall_potion": "Unstable Recall Lingering Potion"
+  "item.minecraft.splash_potion.effect.unstable_recall_potion": "Unstable Splash Recall Potion",
+  "item.minecraft.lingering_potion.effect.unstable_recall_potion": "Unstable Lingering Recall Potion",
+  "item.minecraft.tipped_arrow.effect.unstable_recall_potion": "Arrow Of Unstable Recall",
+  "effect.rogue.unstable_recall": "Impending Recall"
 }
