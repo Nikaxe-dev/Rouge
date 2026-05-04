@@ -2,9 +2,12 @@ package nikaxe.rogue.effect;
 
 import net.minecraft.commands.CommandSource;
 import net.minecraft.commands.Commands;
+import net.minecraft.core.BlockPos;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.sounds.SoundEvents;
+import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.entity.LivingEntity;
@@ -24,15 +27,39 @@ public class UnstableRecallEffect extends MobEffect {
 
     @Override
     public boolean applyEffectTick(ServerLevel world, LivingEntity entity, int amplifier) {
-        ServerLevel camp = world.getServer().getLevel(Rogue.CAMP_LEVEL);
+        MobEffectInstance effect = entity.getEffect(ModEffects.UNSTABLE_RECALL_EFFECT);
 
-        Rogue.LOGGER.info(camp != null ? "serverlevel camp exists" : "serverlevel camp doesnt exist");
+        //entity.setDeltaMovement(new Vec3(entity.getDeltaMovement().x, 1, entity.getDeltaMovement().z));
 
-        if (camp != null) {
-            if(entity instanceof ServerPlayer) {
-                DropMaterials.DropHalfNonGear((ServerPlayer) entity);
+        entity.addDeltaMovement(new Vec3(0,1,0));
+
+        if(effect.getDuration() == 1) {
+            ServerLevel camp = world.getServer().getLevel(Rogue.CAMP_LEVEL);
+
+            if (camp != null) {
+                if (entity instanceof ServerPlayer) {
+                    DropMaterials.DropHalfNonGear((ServerPlayer) entity);
+                }
+
+                world.playSound(
+                        null,
+                        entity.blockPosition(),
+                        SoundEvents.PORTAL_TRAVEL,
+                        SoundSource.NEUTRAL,
+                        0.1f,
+                        1f
+                );
+                camp.playSound(
+                        null,
+                        new BlockPos(0, 0, 0),
+                        SoundEvents.PORTAL_TRAVEL,
+                        SoundSource.NEUTRAL,
+                        0.1f,
+                        1f
+                );
+
+                entity.teleport(new TeleportTransition(camp, new Vec3(0, 0, 0), new Vec3(0, 0, 0), 0, 0, TeleportTransition.DO_NOTHING));
             }
-            entity.teleport(new TeleportTransition(camp, new Vec3(0, 0, 0), new Vec3(0, 0, 0), 0, 0, TeleportTransition.DO_NOTHING));
         }
 
         return super.applyEffectTick(world, entity, amplifier);
@@ -40,7 +67,7 @@ public class UnstableRecallEffect extends MobEffect {
 
     @Override
     public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-        return duration == 1;
+        return true;
     }
 
     @Override
@@ -48,6 +75,6 @@ public class UnstableRecallEffect extends MobEffect {
         super.onEffectStarted(entity, i);
         MobEffectInstance effect = entity.getEffect(ModEffects.UNSTABLE_RECALL_EFFECT);
         //entity.addEffect(new MobEffectInstance(MobEffects.NAUSEA, effect.getDuration() + 40, 1000));
-        entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, effect.getDuration(), 2));
+        //entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, effect.getDuration(), 2));
     }
 }
